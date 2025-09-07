@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
     if (!loggedInUser || loggedInUser.role !== 'student') {
-        window.location.href = 'login.html';
+        window.location.href = '/';
         return;
     }
     
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleLogout = () => {
         sessionStorage.removeItem('loggedInUser');
-        window.location.href = 'login.html';
+        window.location.href = '/';
     };
 
     renderStudentTickets();
