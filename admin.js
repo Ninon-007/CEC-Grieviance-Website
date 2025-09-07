@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
     if (!loggedInUser || loggedInUser.role !== 'admin') {
-        window.location.href = 'login.html';
+        window.location.href = '/';
         return;
     }
     adminDashboardHeader.textContent = `🛠️ Welcome, ${loggedInUser.name}`;
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const handleLogout = () => {
         sessionStorage.removeItem('loggedInUser');
-        window.location.href = 'login.html';
+        window.location.href = '/';
     };
     
     // NEW: Event handlers for filters
